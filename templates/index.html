@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Scrape data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1 style="font-weight: bold">Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+
+    <h2 style="font-weight: bold">Latest Mars News:</h2>
+    <h3>{{ scrape_data.news|safe }}</h3>
+<br>
+<br>
+        <h2 style="font-weight: bold"> Featured Mars Image</h2>
+            <img style = "width: 500px"  src={{ scrape_data.featured_image_url|safe }} class="center">
+          </p>
+      </div>
+<br>
+<br>
+
+    <p><h2 style="font-weight: bold">Mars Weather</h2>
+    <h3>{{ scrape_data.weather|safe }}</h3>
+  </p>
+<br>
+<br>
+<h2 style="font-weight: bold">Facts About Mars</h2>
+  <h3>{{ scrape_data.facts|safe }}</h3>  
+  <br>
+  <br>
+
+  <h2 style="font-weight: bold">Mars Hemispheres</h2>
+  <table>
+   <tr>
+  <td><h4>Cerberus Hemisphere</h4>
+  <img style = "width: 70% " src= 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg'></td>
+  <td><h4>Schiaparelli Hemisphere</h4>
+  <img style = "width: 70% " src= 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full.jpg'></td>
+</tr>
+
+<tr>
+  <td><h4>Syrtis Major Hemisphere</h4>
+  <img style = "width: 70% " src= 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg'></td>
+  <td><h4>Valles Marineris Hemisphere</h4>
+  <img style = "width: 70% " src= 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg'></td>
+</tr>
+</table>
+</div>
+        </div>
+      
+      </div>
+    </div> 
+    
+      </div>
+     </div>  
+  </div>
+</body>
+
+</html>
